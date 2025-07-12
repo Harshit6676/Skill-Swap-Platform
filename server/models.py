@@ -1,0 +1,16 @@
+
+from sqlmodel import SQLModel, Field
+from typing import Optional
+
+class User(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    username: str
+    email: str
+    password: str
+
+class SkillOffer(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int
+    skill: str
+    level: str
+    type: str
