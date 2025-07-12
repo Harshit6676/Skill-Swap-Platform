@@ -3,8 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select
 from database import get_session
 from models import User
-from auth import hash_password, verify_password, create_token
-from auth import get_current_user
+from auth import hash_password, verify_password, create_token, get_current_user
 
 router = APIRouter()
 
